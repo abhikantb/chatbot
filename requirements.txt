@@ -1,0 +1,7 @@
+streamlit
+langgraph
+langchain-groq
+python-dotenv
+ipykernel
+langgraph-checkpoint-sqlite
+langsmith
