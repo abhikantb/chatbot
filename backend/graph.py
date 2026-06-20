@@ -22,7 +22,11 @@ alpha_vantage_stock_API_KEY = os.getenv("alpha_vantage_stock_API_KEY")
 # -------------------
 # 1 tools 
 # -------------------
-search_tool = DuckDuckGoSearchRun(region="us-en")
+@tool
+def web_search(query: str) -> str:
+    """Search the web for current events, news, or general information."""
+    search_tool = DuckDuckGoSearchRun(region="us-en")
+    return search_tool.run(query)
 
 @tool
 def get_weather_data(city: str) -> str:
@@ -43,8 +47,8 @@ def get_stock_price(symbol: str) -> dict:
     r = requests.get(url)
     return r.json()
 
-tools = [search_tool, get_weather_data, get_stock_price]
-llm_with_tools = llm.bind_tools(tools)
+tools = [web_search, get_weather_data, get_stock_price]
+llm_with_tools = llm.bind_tools(tools,tool_choice="auto")
 
 # -------------------
 # 2 state
