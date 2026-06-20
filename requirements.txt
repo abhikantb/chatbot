@@ -5,3 +5,5 @@ python-dotenv
 ipykernel
 langgraph-checkpoint-sqlite
 langsmith
+langchain_community
+duckduckgo-search
