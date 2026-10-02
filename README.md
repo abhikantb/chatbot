@@ -11,7 +11,7 @@ A simple web-based chatbot application that features persistent conversation his
 *   **[LangSmith](https://www.langchain.com/langsmith)**: Tracks, monitors, and debugs chatbot runs and performance.
 *   **SQLite Database (`chatbot.db`)**: Stores conversation history so the chatbot remembers past interactions.
 *   **[Streamlit](https://streamlit.io/)**: Powers the web user interface (chat input, messages, sidebar history).
-*   **Groq Cloud (Llama 3.3 70B)**: The LLM engine (`llama-3.3-70b-versatile`) that reads queries and generates responses.
+*   **Groq Cloud (openai gpt 120B)**: The LLM engine (`openai/gpt-oss-120b`) that reads queries and generates responses.
 
 ---
 

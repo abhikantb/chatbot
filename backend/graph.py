@@ -6,7 +6,8 @@ from typing import TypedDict,Annotated
 from langchain_core.messages import BaseMessage,HumanMessage
 from langgraph.graph.message import add_messages
 from langchain_groq import ChatGroq
-llm=ChatGroq(model="llama-3.3-70b-versatile",temperature=0.3)
+# llm=ChatGroq(model="llama-3.3-70b-versatile",temperature=0.3)
+llm=ChatGroq(model="openai/gpt-oss-120b",temperature=0.3)
 from langgraph.graph import StateGraph,START,END
 from langgraph.checkpoint.sqlite import SqliteSaver
 import sqlite3
